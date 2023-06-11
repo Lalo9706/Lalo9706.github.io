@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Abarrotes Cuevas</title>
+    <link rel="stylesheet" href="../CSS/CLI_MainDStyle.css">
+    <script src="../JS/CLI_MainDashboardScript.js"></script>
+</head>
+<body>
+    <header>
+        <img src="../resourses/logo_cuevas.png" alt="Logo de la empresa" class="logo">
+        <div class="header-buttons">
+            <div class="header-info">
+                <label id="user-label"></label>
+            </div>
+            <br>
+            <button onclick="buttonFuncionalityRegisteraddress()">Registrar dirección de entrega</button>
+            <br>
+            <button onclick="buttonFuncionalityRegisterPaymentMethod()">Registrar método de pago</button>
+        </div>
+
+    </header>
+    <div class="content">
+        <div class="cart-info">
+            <img src="../resourses/cart_icon.png" alt="Icono de carrito" class="cart-icon">
+            <label id="cantidad_carrito"></label>
+        </div>
+        <div class="tab-control">
+            <button class="tab-button active" onclick="openTab(event, 'catalogo')">Catalogo de productos</button>
+            <button class="tab-button" onclick="openTab(event, 'carrito')">Carrito de compras</button>
+            <button class="tab-button" onclick="openTab(event, 'visualizar')">Visualizar Pedidos</button>
+        </div>
+
+        <div id="catalogo" class="tab-content active">
+            <h2>Catálogo de Productos</h2>
+            <br>
+            <div id="div_resultados" class="resultados">
+                <div class="tarjeta-contenedor"></div>
+            </div>
+            <br><br>
+            <div id="div_resultadosProductos" class="resultadosProductos">
+                <div class="tarjeta-contenedorProductos"></div>
+            </div>
+        </div>
+
+        <div id="carrito" class="tab-content">
+            <h2>lista del carrito de compras</h2>
+            <br>
+            <div id="div_carrito_info" class="carrito-info">
+                <div class="carrito-details">
+                    <label id="carrito-cantidad-label">Cantidad de articulos: 0</label>
+                    <label id="carrito-total-label">Total a pagar: $0.00</label>
+                </div>
+                <div class="carrito-buttons">
+                    <button onclick="payCar()">Pagar</button>
+                    <button onclick="deleteAllcar()">Borrar Carrito</button>
+                </div>
+            </div>
+            <br>
+            <div id="div_resultadosProductosCarrito" class="resultadosProductosCarrito">
+                <div class="tarjeta-contenedorProductosCarrito"></div>
+            </div>
+        </div>
+
+        <div id="visualizar" class="tab-content">
+            <h2>Visualizar Pedidos realizados</h2>
+            <br>
+            <div id="div_resultadosProductoshistorial" class="resultadosProductosHistorial">
+                <div class="tarjeta-contenedorProductosHistorial"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
