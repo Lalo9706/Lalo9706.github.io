@@ -6,7 +6,7 @@ function loginbutton() {
   
     alert("Usuario: " + username + "\nContraseña: " + password);
 
-    window.location.href = 'CLI_MainDashBoard.html';
+    window.location.href = 'CLI_MainDashboard.html';
 }
   
   
